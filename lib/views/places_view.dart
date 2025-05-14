@@ -1,3 +1,4 @@
+import 'package:favourite_places_app/views/new_place_view.dart';
 import 'package:favourite_places_app/widgets/places_list.dart';
 import 'package:flutter/material.dart';
 
@@ -15,6 +16,16 @@ class PlacesView extends StatelessWidget {
             fontSize: 28,
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (context) => NewPlaceView()));
+            },
+            icon: Icon(Icons.add),
+          ),
+        ],
       ),
       body: PlacesList(places: []),
     );
