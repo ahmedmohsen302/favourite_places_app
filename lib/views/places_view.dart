@@ -1,3 +1,4 @@
+import 'package:favourite_places_app/widgets/places_list.dart';
 import 'package:flutter/material.dart';
 
 class PlacesView extends StatelessWidget {
@@ -15,6 +16,7 @@ class PlacesView extends StatelessWidget {
           ),
         ),
       ),
+      body: PlacesList(places: []),
     );
   }
 }
