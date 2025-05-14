@@ -1,4 +1,5 @@
 import 'package:favourite_places_app/models/places_model.dart';
+import 'package:favourite_places_app/views/place_details_view.dart';
 import 'package:flutter/material.dart';
 
 class PlacesList extends StatelessWidget {
@@ -19,6 +20,14 @@ class PlacesList extends StatelessWidget {
                     fontSize: 24,
                   ),
                 ),
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder:
+                          (context) => PlaceDetailsView(place: places[index]),
+                    ),
+                  );
+                },
               ),
         )
         : Center(
